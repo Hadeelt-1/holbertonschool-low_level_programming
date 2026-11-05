@@ -21,10 +21,10 @@ void perform_operation(int choice)
 {
 	double a, b;
 
-	printf("Enter first number: ");
+	printf("A: ");
 	if (scanf("%lf", &a) != 1)
 		return;
-	printf("Enter second number: ");
+	printf("B: ");
 	if (scanf("%lf", &b) != 1)
 		return;
 
