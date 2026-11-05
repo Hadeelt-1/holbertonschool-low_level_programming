@@ -37,7 +37,7 @@ void perform_operation(int choice)
 	else if (choice == 4)
 	{
 		if (b == 0)
-			printf("Error: Division by zero\n");
+			printf("Error: division by zero\n");
 		else
 			printf("Result: %f\n", a / b);
 	}
