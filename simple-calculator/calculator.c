@@ -5,34 +5,41 @@
  */
 void print_menu(void)
 {
+	printf("0) Quit\n");
 	printf("1) Addition\n");
 	printf("2) Subtraction\n");
 	printf("3) Multiplication\n");
 	printf("4) Division\n");
-	printf("5) Quit\n");
 	printf("Choice: ");
 }
 
 /**
- * calculate - Performs the arithmetic operations
- * @choice: The user's operation choice
- * @first: First number
- * @second: Second number
+ * perform_operation - Executes the chosen arithmetic operation
+ * @choice: The operation choice
  */
-void calculate(int choice, double first, double second)
+void perform_operation(int choice)
 {
+	double a, b;
+
+	printf("Enter first number: ");
+	if (scanf("%lf", &a) != 1)
+		return;
+	printf("Enter second number: ");
+	if (scanf("%lf", &b) != 1)
+		return;
+
 	if (choice == 1)
-		printf("Result: %f\n", first + second);
+		printf("Result: %f\n", a + b);
 	else if (choice == 2)
-		printf("Result: %f\n", first - second);
+		printf("Result: %f\n", a - b);
 	else if (choice == 3)
-		printf("Result: %f\n", first * second);
+		printf("Result: %f\n", a * b);
 	else if (choice == 4)
 	{
-		if (second == 0)
+		if (b == 0)
 			printf("Error: Division by zero\n");
 		else
-			printf("Result: %f\n", first / second);
+			printf("Result: %f\n", a / b);
 	}
 }
 
@@ -43,23 +50,25 @@ void calculate(int choice, double first, double second)
  */
 int main(void)
 {
-	int choice = 0;
-	double first, second;
+	int choice;
 
 	while (1)
 	{
 		print_menu();
 		if (scanf("%d", &choice) != 1)
 			break;
-		if (choice == 5)
+		if (choice == 0)
+		{
+			printf("Bye!\n");
 			break;
+		}
 		else if (choice >= 1 && choice <= 4)
 		{
-			printf("Enter first number: ");
-			scanf("%lf", &first);
-			printf("Enter second number: ");
-			scanf("%lf", &second);
-			calculate(choice, first, second);
+			perform_operation(choice);
+		}
+		else
+		{
+			printf("Invalid choice\n");
 		}
 	}
 	return (0);
