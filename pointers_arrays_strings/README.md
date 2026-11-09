@@ -5,3 +5,4 @@
 - 4-print_rev.c: prints a string in reverse
 - 5-rev_string.c: reverses a string
 - 6-puts2.c: prints every other character of a string
+- 7-puts_half.c: prints the second half of a string
