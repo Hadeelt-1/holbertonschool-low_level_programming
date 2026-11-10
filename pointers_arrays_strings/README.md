@@ -9,3 +9,4 @@
 - 8-print_array.c: prints n elements of an array of integers
 - 9-strcpy.c: copies a string to a buffer
 - 100-atoi.c: converts a string to an integer
+# C - More pointers, arrays and strings
