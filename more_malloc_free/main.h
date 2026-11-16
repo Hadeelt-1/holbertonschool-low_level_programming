@@ -7,5 +7,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n);
 void *_calloc(unsigned int nmemb, unsigned int size);
 int *array_range(int min, int max);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+void error_exit(void);
+int _strlen(char *s);
+int is_number(char *s);
+void multiply(char *s1, char *s2, int len1, int len2, int *res);
+void print_result(int *res, int size);
 
 #endif
